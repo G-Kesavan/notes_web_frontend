@@ -49,8 +49,8 @@ const loginPage = () => {
     <>
       <Navbar/>
       <div className="relative z-0 flex justify-center bg-blue-50 items-center h-[90vh] w-full ">
-        <div className='p-1 overflow-hidden rounded-2xl '>
-          <div className="relative flex items-center bg-blue-100 rounded-2xl px-6 py-8 border-[1px] border-blue-200/5 shadow-2xl before:content-[''] before:flex before:absolute before:animate-spin before:left-[-7.5px] before:w-[calc(100%+15px)] before:h-[calc(40%+15px)] before:rounded-2xl before:bg-gradient-to-t before:from-transparent before:via-blue-800 before:to-transparent before:z-[-1]">         
+          <div className="relative flex items-center bg-blue-100 rounded-2xl px-6 py-8 border border-blue-200/5 shadow-2xl  after:bg-conic-animated ">
+        
               <form className="relative z-10 flex flex-col gap-3" onSubmit={handleLogin}>
                 <h2 
                   className='flex w-full items-center justify-center font-bold text-blue-900 text-xl'
@@ -76,7 +76,6 @@ const loginPage = () => {
                 >Not registered yet? &nbsp;<Link to= '/signup' className='text-blue-700' >Create an Account</Link></p>
               </form>
             </div>
-          </div>
         </div>
     </>
   )

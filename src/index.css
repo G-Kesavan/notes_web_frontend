@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@layer base {
+  @property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+}
+
+@layer utilities {
+
+  @keyframes spin-slow {
+    to { --angle: -360deg; }
+  }
+
+  .after\:bg-conic-animated::after,.before\:bg-conic-animated::before{
+    content: "";
+    background: conic-gradient(from var(--angle),white 1%,#1c398e 2% ,#8ec5ff 20%,white 100% );
+    height: calc(100% + 15px);
+    width: calc(100% + 15px);
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    animation: spin-slow 5s linear infinite;
+    border-radius: 16px;
+    left: -7.5px;
+    top: -7.5px;
+  }
+}
