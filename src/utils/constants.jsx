@@ -1,1 +1,1 @@
-export  const BASE_URL = "https://past-chris-kesava-bfd352ce.koyeb.app/"
+export const BASE_URL = "https://notes-app-backend-rosy-five.vercel.app/api";

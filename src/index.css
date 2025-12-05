@@ -9,14 +9,22 @@
 }
 
 @layer utilities {
-
   @keyframes spin-slow {
-    to { --angle: -360deg; }
+    to {
+      --angle: -360deg;
+    }
   }
 
-  .after\:bg-conic-animated::after,.before\:bg-conic-animated::before{
+  .after\:bg-conic-animated::after,
+  .before\:bg-conic-animated::before {
     content: "";
-    background: conic-gradient(from var(--angle),white 1%,#1c398e 2% ,#8ec5ff 20%,white 100% );
+    background: conic-gradient(
+      from var(--angle),
+      white 1%,
+      #1c398e 2%,
+      #8ec5ff 20%,
+      white 100%
+    );
     height: calc(100% + 15px);
     width: calc(100% + 15px);
     z-index: -1;
