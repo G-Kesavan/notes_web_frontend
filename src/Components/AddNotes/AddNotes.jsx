@@ -9,7 +9,7 @@ const AddNotes = ({ noteData, type, closeOn, getAllNotes }) => {
   const [tags, setTags] = useState(noteData ? noteData.tags : []);
   const [error, setError] = useState(null);
 
-  const editNote = async () => {
+  const editNote = async () => { 
     try {
       const response = await axiosInstance.put(
         `/note/edit_note?noteId=${noteData.id}`,
